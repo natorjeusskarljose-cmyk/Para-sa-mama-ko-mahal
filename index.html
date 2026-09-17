@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para sa Maganda Kong Mama ❤️</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffd6e7, #fff0f6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hearts span {
+    position: fixed;
+    bottom: -30px;
+    font-size: 25px;
+    animation: float 6s linear infinite;
+    opacity: 0;
+}
+
+.hearts span:nth-child(1) { left: 10%; animation-delay: 0s; }
+.hearts span:nth-child(2) { left: 30%; animation-delay: 2s; }
+.hearts span:nth-child(3) { left: 50%; animation-delay: 1s; }
+.hearts span:nth-child(4) { left: 70%; animation-delay: 3s; }
+.hearts span:nth-child(5) { left: 90%; animation-delay: 4s; }
+
+@keyframes float {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.card {
+    width: 90%;
+    max-width: 500px;
+    background: rgba(255,255,255,0.95);
+    padding: 30px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+    animation: appear 1.2s ease;
+    z-index: 2;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+h1 {
+    color: #e91e63;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #777;
+    font-size: 16px;
+}
+
+.letter {
+    text-align: left;
+    line-height: 1.7;
+    color: #444;
+    margin-top: 20px;
+}
+
+button {
+    border: none;
+    background: #e91e63;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#message {
+    display: none;
+    margin-top: 20px;
+    color: #e91e63;
+    font-weight: bold;
+    font-size: 18px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hearts">
+    <span>❤️</span>
+    <span>💖</span>
+    <span>💕</span>
+    <span>💗</span>
+    <span>❤️</span>
+</div>
+
+<div class="card">
+
+    <h1>Para sa Maganda Kong Mama ❤️</h1>
+
+    <div class="subtitle">
+        Isang maliit na mensahe mula sa iyong anak 💐
+    </div>
+
+    <div class="letter">
+        <p><b>Mahal kong Mama,</b></p>
+
+        <p>
+        Gusto ko lang sabihin kung gaano ako nagpapasalamat
+        na ikaw ang aking ina. Salamat sa lahat ng pagmamahal,
+        pag-aalaga, at sakripisyong ginagawa mo para sa akin.
+        </p>
+
+        <p>
+        Kahit hindi ko palaging nasasabi, mahal na mahal kita.
+        Ikaw ang isa sa mga taong nagbibigay sa akin ng lakas
+        at inspirasyon araw-araw.
+        </p>
+
+        <p>
+        Salamat sa iyong walang sawang pag-unawa at suporta.
+        Sana lagi mong tandaan na napakahalaga mo sa akin.
+        </p>
+
+        <p>
+        <b>Mahal na mahal kita, Mama! ❤️</b>
+        </p>
+
+        <p style="text-align:right;">
+        — Ang iyong anak 💖
+        </p>
+    </div>
+
+    <button onclick="showMessage()">
+        Pindutin mo, Mama 💝
+    </button>
+
+    <div id="message">
+        🌹 Ikaw ang pinakamamahal kong Mama! 🌹
+    </div>
+
+</div>
+
+<script>
+function showMessage() {
+    document.getElementById("message").style.display = "block";
+}
+</script>
+
+</body>
+</html>
